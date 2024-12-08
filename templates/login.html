@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Crochet Creations Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="/login" class="login-btn">Login</a>
+                <a href="/register" class="login-btn">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit">Login</button>
+            </form>
+
+            <a href="/forgot-password" class="form-link">Forgot Password?</a>
+            
+            <p>Don't have an account? <a href="/register" class="form-link">Register Here</a></p>
+        </div>                
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Crochet Creations. All rights reserved.</p>
+        <div class="social-media-links">
+            <a href="https://www.instagram.com/crochetcreationswork/">Instagram</a>
+            <a href="mailto:crochetCreationsWork@gmail.com">Email</a>
+        </div>
+    </footer>
+</body>
+</html>

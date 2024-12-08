@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }} - Crochet Creations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Crochet Creations Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <!-- Add the Register and Login buttons -->
+            <div class="auth-buttons">
+                <a href="/login" class="login-btn">Login</a>
+                <a href="/register" class="login-btn">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="{{ url_for('static', filename='img/' + product['image']) }}" alt="{{ product['name'] }}">
+        </div>
+        <div class="product-info">
+            <h1>{{ product.name }}</h1>
+            <p class="product-description">{{ product.description }}</p>
+            <p class="product-price">${{ product.price }}</p>
+            
+            <!-- New product details -->
+            <p class="product-color"><strong>Color:</strong> {{ product.color }}</p>
+            <p class="product-size"><strong>Size:</strong> {{ product.size }}</p>
+            <p class="product-material"><strong>Material:</strong> {{ product.material }}</p>
+            <p class="product-stock"><strong>Stock Quantity:</strong> {{ product.stock_quantity }}</p>
+            <p class="product-dimensions"><strong>Dimensions:</strong> {{ product.dimensions }}</p>
+            
+            <button class="cta-btn">Add to Cart</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Crochet Creations. All rights reserved.</p>
+        <div class="social-media-links">
+            <a href="https://www.instagram.com/crochetcreationswork/">Instagram</a>
+            <a href="mailto:crochetCreationsWork@gmail.com">Email</a>
+        </div>
+    </footer>
+</body>
+</html>

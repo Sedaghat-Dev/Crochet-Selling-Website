@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Crochet Creations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Crochet Creations Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <!-- Add the Register and Login buttons -->
+            <div class="auth-buttons">
+                <a href="/login" class="login-btn">Login</a>
+                <a href="/register" class="login-btn">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <main class="about-page">
+        <section class="about-intro">
+            <h1>About Crochet Creations</h1>
+            <p>
+                Welcome to Crochet Creations! We are a small, family-owned business passionate about handmade crochet items.
+                Each piece is crafted with love, creativity, and care to bring you unique and beautiful products.
+            </p>
+        </section>
+
+        <section class="about-story">
+            <h2>Our Story</h2>
+            <p>
+                It all started as a hobby and a love for crocheting intricate designs. Over time, this passion grew into
+                a business dedicated to sharing our work with people who appreciate the art of crochet. Whether you're
+                looking for cozy clothing, decorative items, or personalized gifts, we have something special for you.
+            </p>
+        </section>
+
+        <section class="about-values">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Quality:</strong> We ensure every product meets high standards of craftsmanship.</li>
+                <li><strong>Uniqueness:</strong> Each piece is one-of-a-kind and designed to stand out.</li>
+                <li><strong>Customer Love:</strong> Your satisfaction is our top priority.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Crochet Creations. All rights reserved.</p>
+        <div class="social-media-links">
+            <a href="https://www.instagram.com/crochetcreationswork/">Instagram</a>
+            <a href="mailto:crochetCreationsWork@gmail.com">Email</a>
+        </div>
+    </footer>
+</body>
+</html>

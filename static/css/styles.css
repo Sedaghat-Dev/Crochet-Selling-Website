@@ -1,0 +1,675 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+}
+
+nav .logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Hover color */
+}
+
+/* Login Button */
+.login-btn {
+    margin-left: auto;
+    padding: 8px 16px;
+    background-color: #007BFF; /* Button background color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #0056b3; /* Hover background color */
+}
+
+main {
+    flex: 1; /* This will take up all the available space, pushing the footer down */
+}
+
+.main-banner {
+    text-align: center;
+    background-color: #f0f8ff;
+    padding: 50px 20px;
+}
+
+.main-banner h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.main-banner p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.cta-btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background-color: #45a049;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 250px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    margin-top: auto; /* Pushes content below the image */
+}
+
+.product-card .product-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.product-card .cta-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.product-card .cta-btn:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333; /* Example background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-media-links a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+.social-media-links a:hover {
+    color: #4caf50;
+}
+/* Styling for Shop Page (Category List) */
+.shop-categories {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.shop-categories h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #4CAF50; /* Mild Green */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-btn:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+.category-btn:active {
+    transform: translateY(1px); /* Pressed effect */
+}
+
+/* Styling for Product Grid on Category Page */
+.category-products {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.category-products h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #45a049;
+}
+/* Styling for the logo */
+.logo img {
+    width: 200px; /* Adjust this value to make the logo bigger or smaller */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
+    object-fit: contain; /* Make sure it scales properly within its container */
+    margin-left: 35px;
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it takes the full height of the viewport */
+}
+
+.login-btn {
+    background-color: #4CAF50; /* Mild green */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.login-btn:hover {
+    background-color: #45a049; /* Slightly darker green */
+    transform: translateY(-3px); /* Lift effect */
+}
+.login-btn:active {
+    transform: translateY(1px); /* Pressed effect */
+}
+/* About Page Styling */
+.about-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-page p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.about-story, .about-values {
+    margin-top: 30px;
+}
+
+.about-values ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-values li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.about-values strong {
+    color: #007BFF; /* Highlighted text color */
+}
+/* Contact Page Styling */
+.contact-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-page h1, .contact-page h2 {
+    color: #333;
+}
+
+.contact-page p {
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.contact-details {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-details a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+/* Product Detail Page */
+.product-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-image {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-info {
+    flex: 2;
+    padding: 20px;
+    margin-left: 40px;
+}
+
+.product-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.product-info .product-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.product-info .product-price {
+    font-size: 1.5rem;
+    color: #4CAF50; /* Green for price */
+    margin-bottom: 20px;
+}
+
+/* Add to Cart Button */
+.cta-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #45a049; /* Hover effect */
+}
+/* Make sure the buttons are next to each other */
+.auth-buttons {
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #6a9d40; /* Green background */
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons a:hover {
+    background-color: #568b34; /* Darker green on hover */
+}
+
+.auth-buttons .login-btn {
+    background-color: #6a9d40; /* Green for login */
+}
+
+.auth-buttons .register-btn {
+    background-color: #4b8e15; /* Slightly different green for register */
+}
+
+.auth-buttons a:hover {
+    background-color: #568b34; /* Darker green on hover */
+}
+/* General Styling for the Login Page */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-container p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+}
+
+.login-container input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button Styles */
+.login-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.login-container button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+.login-container button:active {
+    transform: translateY(1px);
+}
+
+/* Link Styling for 'Forgot Password' and Register */
+.login-container .form-link {
+    display: block;
+    color: #007BFF;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.login-container .form-link:hover {
+    text-decoration: underline;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;  /* Aligns labels to the right */
+    margin-bottom: 5px;;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+/* General Styling for the Register Page */
+.register-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.register-container p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.register-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+}
+
+.register-container input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Label Styling */
+.register-container label {
+    display: block;
+    text-align: left;  /* Aligns labels to the right */
+    margin-bottom: 5px;;
+}
+
+/* Button Styles */
+.register-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.register-container button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+.register-container button:active {
+    transform: translateY(1px);
+}
+
+/* Link Styling for Login */
+.register-container .form-link {
+    display: block;
+    color: #007BFF;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.register-container .form-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .register-container {
+        width: 90%;
+        padding: 20px;
+    }
+}

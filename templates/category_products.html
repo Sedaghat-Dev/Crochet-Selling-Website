@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ category_name }} - Crochet Creations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Crochet Creations Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <!-- Add the Register and Login buttons -->
+            <div class="auth-buttons">
+                <a href="/login" class="login-btn">Login</a>
+                <a href="/register" class="login-btn">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Category Products Section -->
+    <section class="category-products">
+        <h2>Products in the {{ category_name }} Category</h2>
+        <div class="product-grid">
+            {% for product in products %}
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='img/' + product['image']) }}" alt="{{ product['name'] }}">
+                <h3>{{ product['name'] }}</h3>
+                <p>${{ product['price'] }}</p>
+                <p>{{ product['description'] }}</p>
+                <a href="/product/{{ product['_id'] }}" class="cta-btn">View Details</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Crochet Creations. All rights reserved.</p>
+        <div class="social-media-links">
+            <a href="https://www.instagram.com/crochetcreationswork/">Instagram</a>
+            <a href="mailto:crochetCreationsWork@gmail.com">Email</a>
+        </div>
+    </footer>
+</body>
+</html>
